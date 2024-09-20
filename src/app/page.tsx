@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className='bg-black min-h-screen'>
       <section
-        className='flex flex-col md:flex-row py-40 hero-section custom-container'
+        className='flex gap-10 flex-col md:flex-row md:items-center pt-[10rem] pb-20 hero-section custom-container'
         style={{
           backgroundImage: 'url(/assets/backgrounds/hero.svg)',
           backgroundSize: 'cover',
@@ -13,8 +13,8 @@ export default function Home() {
           backgroundPosition: 'top center',
         }}
       >
-        <div className='flex-[2]'>
-          <h1 className='heading-hero text-white text-[2.2rem] md:text-[4rem] leading-[1.4em] md:leading-[1.2em] font-bold'>
+        <div className='flex-[3]'>
+          <h1 className='heading-hero text-white text-[2.2rem] md:text-[3.6rem] leading-[1.4em] md:leading-[1.2em] font-bold'>
             Hi, <br /> I&apos;m{' '}
             <strong className='text-primary'>Sandip Das</strong>, <br /> a
             Fullstack developer.
@@ -43,7 +43,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className='flex-1'></div>
+        <div className='flex-[2]'>
+          <div className='bg-white rounded-lg h-[440px]'></div>
+        </div>
       </section>
     </main>
   );
