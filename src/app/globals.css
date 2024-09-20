@@ -9,3 +9,9 @@ body,
 html {
   margin: 0;
 }
+
+@layer components {
+  .custom-container {
+    @apply max-w-[1200px] mx-auto px-6;
+  }
+}

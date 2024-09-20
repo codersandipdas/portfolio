@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { socials } from './utils/socials';
+import { socials } from '../utils/socials';
 
 export default function Home() {
   return (
     <main className='bg-black min-h-screen'>
       <section
-        className='flex flex-col md:flex-row py-40 hero-section container px-4 mx-auto'
+        className='flex flex-col md:flex-row py-40 hero-section custom-container'
         style={{
           backgroundImage: 'url(/assets/backgrounds/hero.svg)',
           backgroundSize: 'cover',
@@ -14,8 +14,9 @@ export default function Home() {
         }}
       >
         <div className='flex-[2]'>
-          <h1 className='heading-hero text-white text-[3.5rem] md:text-[4.5rem] leading-[1.1em] font-bold'>
-            Hi, I&apos;m <strong className='text-primary'>Sandip Das</strong>, a
+          <h1 className='heading-hero text-white text-[2.2rem] md:text-[4rem] leading-[1.4em] md:leading-[1.2em] font-bold'>
+            Hi, <br /> I&apos;m{' '}
+            <strong className='text-primary'>Sandip Das</strong>, <br /> a
             Fullstack developer.
           </h1>
           <p className='my-4 max-w-prose font-normal text-gray-400 d:text-gray-400 md:text-lg md:tracking-tight'>
