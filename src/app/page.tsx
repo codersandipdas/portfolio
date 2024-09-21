@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { socials } from '../utils/socials';
 import { CodeWindow } from '@/components/codeWindow/CodeWindow';
+import SocialButton from '@/components/socialButton/SocialButton';
 
 export default function Home() {
   return (
@@ -29,18 +29,14 @@ export default function Home() {
               WOW!
             </em>
           </p>
-          <div className='flex gap-5 flex-wrap items-center mt-8 text-base'>
+          <div className='flex gap-4 flex-wrap items-center mt-8'>
             {socials.map((social) => (
-              <Link
-                title={social.title}
+              <SocialButton
                 key={social.id}
+                title={social.title}
                 href={social.link}
-                target='_blank'
-                className='flex gap-2 items-center bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-md transition-all'
-              >
-                <span className='text-primary'>{social.icon}</span>
-                <span className='font-semibold text-white'>{social.title}</span>
-              </Link>
+                icon={social.icon}
+              />
             ))}
           </div>
         </div>

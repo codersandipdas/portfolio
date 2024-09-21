@@ -4,6 +4,7 @@ import { Toaster } from 'react-hot-toast';
 
 import './globals.css';
 import Header from '@/components/header/Header';
+import Footer from '@/components/footer/Footer';
 
 export const metadata: Metadata = {
   title: 'Sandip Das',
@@ -22,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className={inter.className}>
-      <body className={`antialiased`}>
+      <body className={`antialiased bg-black`}>
         <Header />
         {children}
         <Toaster
@@ -35,6 +36,7 @@ export default function RootLayout({
             },
           }}
         />
+        <Footer />
       </body>
     </html>
   );

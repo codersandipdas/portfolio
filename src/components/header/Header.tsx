@@ -53,7 +53,8 @@ const Header = () => {
           <div className='shrink-0 hidden md:flex'>
             <Link
               href='/assets/pdfs/resume.pdf'
-              className='button-rainbow ml-4 whitespace-nowrap px-4 py-1.5 text-sm font-medium tracking-tight text-black'
+              // className='button-rainbow ml-4 whitespace-nowrap px-4 py-1.5 text-sm font-medium tracking-tight text-black'
+              className='btn-rainbow'
               target='_blank'
             >
               Resume

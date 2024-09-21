@@ -23,3 +23,29 @@ html {
   border-radius: 0.375rem;
   border-color: rgb(var(--color-gray-600) / 0.5);
 }
+
+.btn-rainbow {
+  background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+  background: white;
+  border: 0;
+  border-radius: 6px;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  outline: transparent;
+  padding: 0.3rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+.btn-rainbow:not([disabled]):focus,
+.btn-rainbow:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
