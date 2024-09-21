@@ -31,7 +31,7 @@ const Header = () => {
                 width={45}
                 quality={100}
                 alt='Sandip Das'
-                className='w-[45px] h-auto rounded-full'
+                className='w-[45px] h-auto rounded-full bg-slate-800'
               />
             </Link>
           </div>
