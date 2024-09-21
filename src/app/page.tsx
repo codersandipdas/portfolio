@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { socials } from '../utils/socials';
+import { CodeWindow } from '@/components/codeWindow/CodeWindow';
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
           backgroundPosition: 'top center',
         }}
       >
-        <div className='flex-[3]'>
+        <div className='flex-[3] shrink-0'>
           <h1 className='heading-hero text-white text-[2.6rem] md:text-[3.6rem] leading-[1.3em] md:leading-[1.2em] font-bold'>
             Hi, <br /> I&apos;m{' '}
             <strong className='text-primary'>Sandip Das</strong>, <br /> a
@@ -43,8 +44,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className='flex-[2]'>
-          <div className='bg-white rounded-lg h-[440px]'></div>
+        <div className='flex-[2] grow-0'>
+          <CodeWindow />
         </div>
       </section>
     </main>
