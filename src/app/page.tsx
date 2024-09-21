@@ -15,7 +15,7 @@ export default function Home() {
         }}
       >
         <div className='flex-[3] shrink-0'>
-          <h1 className='heading-hero text-white text-[2.4rem] md:text-[3.6rem] leading-[1.3em] md:leading-[1.2em] font-bold'>
+          <h1 className='heading-hero text-white text-[2.2rem] md:text-[3.6rem] leading-[1.3em] md:leading-[1.2em] font-bold'>
             Hi, <br /> I&apos;m{' '}
             <strong className='text-primary'>Sandip Das</strong>, <br /> a
             Fullstack developer.
