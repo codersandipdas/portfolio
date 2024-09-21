@@ -3,6 +3,7 @@ import React from 'react';
 import { FaCopy } from 'react-icons/fa';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import toast from 'react-hot-toast';
 
 const codeString = `import { FC } from "react";
 
@@ -28,6 +29,15 @@ export const Welcome: FC<WelcomeProps> = ({ uses }) => {
 export default Welcome;`;
 
 export const CodeWindow = () => {
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(codeString);
+      toast.success('Code copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy text:', err);
+    }
+  };
+
   return (
     <div className='relative w-full h-full overflow-hidden rounded-md border-2 bg-gray-900 p-2.5 shadow-2xl drop-shadow-lg border-gray-600/40'>
       <div className='mb-2 flex items-center border-b border-b-gray-800 pb-2'>
@@ -40,7 +50,10 @@ export const CodeWindow = () => {
           /index.tsx
         </div>
         <div className='shrink-0 flex gap-2 items-center min-w-[60px] justify-end'>
-          <button className='text-gray-500 hover:text-white h-5 w-5 transition-colors'>
+          <button
+            onClick={handleCopy}
+            className='text-gray-500 hover:text-white h-5 w-5 transition-colors'
+          >
             <span className='sr-only'>Copy</span>
             <FaCopy />
           </button>
