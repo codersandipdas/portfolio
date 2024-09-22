@@ -11,7 +11,7 @@ export default function Home() {
     <main className='bg-black min-h-screen'>
       <section className='flex gap-10 flex-col md:flex-row md:items-center pt-[10rem] pb-20 hero-section hero-bg custom-container'>
         <div className='flex-[3] shrink-0 overflow-hidden'>
-          <h1 className='text-[2.8rem] md:text-6xl leading-[1.3em] md:leading-[1.2em] text-white font-bold'>
+          <h1 className='text-[2.6rem] md:text-6xl leading-[1.3em] md:leading-[1.2em] text-white font-bold'>
             Hi, <br /> I&apos;m{' '}
             <strong className='text-primary'>Sandip Das</strong>, <br /> a
             Fullstack Dev.
