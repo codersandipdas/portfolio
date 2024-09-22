@@ -6,6 +6,7 @@ import React from 'react';
 import SocialButton from '../socialButton/SocialButton';
 import { FaGithub } from 'react-icons/fa';
 import { IoArrowForward } from 'react-icons/io5';
+import { TbExternalLink } from 'react-icons/tb';
 
 interface Props {
   title: string;
@@ -34,7 +35,13 @@ const ProjectCard = ({
           width={400}
           className='bg-slate-800 w-full h-full object-cover object-center group-hover:scale-[1.2] transition-transform duration-500'
         />
-        <div className='absolute bottom-0 left-0 w-full h-[60px] bg-gradient-to-b from-transparent from-10% to-gray-900/40 to-90%'></div>
+        <Link
+          href={slug}
+          target='_blank'
+          className='flex items-center justify-center absolute bottom-0 left-0 w-full h-full bg-gray-800/40 transition-all text-white opacity-0 hover:opacity-100'
+        >
+          <TbExternalLink size={40} />
+        </Link>
       </div>
 
       <h3 className='mt-5 text-xl font-bold line-clamp-2'>{title}</h3>
@@ -59,7 +66,6 @@ const ProjectCard = ({
           title='Read More'
           href={slug}
           icon={<IoArrowForward />}
-          target='_self'
           className='flex-row-reverse !bg-transparent !px-0'
           titleClassName='!text-primary'
         />
