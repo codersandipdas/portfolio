@@ -8,7 +8,7 @@ import { projects } from '@/utils/projects';
 
 export default function Home() {
   return (
-    <main className='bg-black min-h-screen'>
+    <main className='min-h-screen'>
       <section className='flex gap-10 flex-col md:flex-row md:items-center pt-[10rem] pb-20 hero-section hero-bg custom-container'>
         <div className='flex-[3] shrink-0 overflow-hidden'>
           <h1 className='text-[2.6rem] md:text-6xl leading-[1.3em] md:leading-[1.2em] text-white font-bold'>
@@ -17,13 +17,10 @@ export default function Home() {
             Fullstack Dev.
           </h1>
           <p className='my-4 max-w-prose font-normal text-gray-400 d:text-gray-400 md:text-lg md:tracking-tight'>
-            I love writing code that takes things next level creating highly
-            performant websites, automated API integrations, building my own
-            dev-tools, and creating stunning user-experiences that makes you
-            feel{' '}
-            <em className='relative cursor-pointer before:absolute b:bottom-0 b:-z-10 b:h-3 b:w-full b:-rotate-2 b:animate-hint-hint b:bg-pink-400/70 b:blur-sm d:b:bg-pink-600'>
-              WOW!
-            </em>
+            I'm a Fullstack Developer with over a year of professional
+            experience in MERN stack. I have hands-on experience with HTML, CSS,
+            Javascript, React.js, Next.js, React Native, Svelte.js, Tailwind
+            CSS, Node.js, Express.js, Nest.js, MongoDB, and Git, etc.
           </p>
           <div className='flex gap-4 flex-wrap items-center mt-8'>
             {socials.map((social) => (
@@ -45,7 +42,7 @@ export default function Home() {
         <SectionHeader
           subtitle='Portfolio'
           title='Checkout my work.'
-          ctaText='View More'
+          ctaText='View All Portfolio'
           ctaLink='/portfolios'
           className='mb-8'
         />
@@ -62,7 +59,7 @@ export default function Home() {
                   : `/portfolios/${project.slug}`
               }
               excerpt={project.excerpt}
-              tags={project?.tags || ['Javascript', 'HTML', 'CSS']}
+              tags={project?.tags || []}
               githubLink={project?.githubLink || ''}
             />
           ))}

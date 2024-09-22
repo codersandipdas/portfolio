@@ -7,8 +7,9 @@ import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
 
 export const metadata: Metadata = {
-  title: 'Sandip Das',
-  description: 'Coder Sandip Das Portfolio',
+  title: 'Home | Sandip Das',
+  description:
+    'I am a Fulstack Developer and I provide high-end and up-to-date designs and developments using the latest tools and technology available.',
 };
 
 const inter = Inter({
