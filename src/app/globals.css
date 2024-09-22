@@ -14,6 +14,12 @@ html {
   .custom-container {
     @apply max-w-[1200px] mx-auto px-6;
   }
+  .subheading {
+    @apply text-base text-primary font-bold;
+  }
+  .heading {
+    @apply text-4xl md:text-6xl text-primary font-bold;
+  }
 }
 
 .button-rainbow {
