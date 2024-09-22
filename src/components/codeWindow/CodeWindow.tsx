@@ -5,28 +5,28 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import toast from 'react-hot-toast';
 
-const codeString = `import { FC } from "react";
-
-type WelcomeProps = {
-  uses:
-    | "explore new tech"
-    | "display my skills"
-    | "find opportunities"
-    | "find a fulltime job";
-};
-
-export const Welcome: FC<WelcomeProps> = ({ uses }) => {
-  return (
-    <>
-      <h1>This is my little slice of the internet.</h1>
-      <p>
-        I use this site to <em>{uses}</em>.
-      </p>
-    </>
-  );
-};
-
-export default Welcome;`;
+const codeString = `const coder = {
+  name: 'Sandip Das',
+  skills: [
+    'HTML', 'CSS',
+    'Tailwind CSS',
+    'Javascript',
+    'React.js',
+    'React Native',
+    'Svelte.js',
+    'Next.js',
+    'Node.js',
+    'Express.js',
+    'Nest.js', 'MongoDB',
+    'Git', '...everythingNice',
+  ],
+  hardWorker: true,
+  quickLearner: true,
+  problemSolver: true,
+  hireable: function () {
+    return this.hardWorker && this.problemSolver && this.skills.length >= 5;
+  },
+};`;
 
 export const CodeWindow = () => {
   const handleCopy = async () => {
@@ -65,6 +65,7 @@ export const CodeWindow = () => {
         wrapLines
         language='tsx'
         style={vscDarkPlus}
+        wrapLongLines
         customStyle={{
           padding: 0,
           backgroundColor: 'transparent',
