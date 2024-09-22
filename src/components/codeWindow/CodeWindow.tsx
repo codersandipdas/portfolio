@@ -46,7 +46,7 @@ export const CodeWindow = () => {
           <button className='h-3 w-3 rounded-full bg-gray-700 transition-colors hover:bg-[#61C454]' />
         </div>
         <div className='flex-1  select-none text-center text-[13px] leading-none tracking-wide text-gray-500'>
-          /index.tsx
+          /index.ts
         </div>
         <div className='shrink-0 flex gap-2 items-center min-w-[60px] justify-end'>
           <button
@@ -62,7 +62,7 @@ export const CodeWindow = () => {
       <SyntaxHighlighter
         showLineNumbers={false}
         wrapLines
-        language='tsx'
+        language='typescript'
         style={vscDarkPlus}
         wrapLongLines
         customStyle={{
