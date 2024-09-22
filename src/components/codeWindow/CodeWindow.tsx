@@ -14,8 +14,7 @@ const codeString = `const coder = {
     'React.js',
     'React Native',
     'Svelte.js',
-    'Next.js',
-    'Node.js',
+    'Next.js', 'Node.js',
     'Express.js',
     'Nest.js', 'MongoDB',
     'Git', '...everythingNice',
@@ -39,7 +38,7 @@ export const CodeWindow = () => {
   };
 
   return (
-    <div className='relative w-full h-full overflow-hidden rounded-md border-2 bg-gray-900 p-2.5 shadow-2xl drop-shadow-lg border-gray-600/40'>
+    <div className='relative w-full h-full overflow-hidden rounded-md border-2 bg-gray-900 md:bg-white/5 p-2.5 shadow-2xl drop-shadow-lg border-gray-600/40 backdrop-blur-xl'>
       <div className='mb-2 flex items-center border-b border-b-gray-800 pb-2'>
         <div className='shrink-0 flex gap-2 items-center min-w-[60px]'>
           <button className='h-3 w-3 rounded-full bg-gray-700 transition-colors hover:bg-[#d85146]' />
