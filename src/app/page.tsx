@@ -3,6 +3,7 @@ import { CodeWindow } from '@/components/codeWindow/CodeWindow';
 import ProjectCard from '@/components/projectCard/ProjectCard';
 import SectionHeader from '@/components/sectionHeader/SectionHeader';
 import SocialButton from '@/components/socialButton/SocialButton';
+import { blogs } from '@/utils/blogs';
 import { isValidUrl } from '@/utils/helpers';
 import { projects } from '@/utils/projects';
 
@@ -48,7 +49,7 @@ export default function Home() {
         />
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-10'>
-          {projects.map((project) => (
+          {projects?.slice(0, 3)?.map((project) => (
             <ProjectCard
               key={project.slug}
               title={project.title}
@@ -61,6 +62,31 @@ export default function Home() {
               excerpt={project.excerpt}
               tags={project?.tags || []}
               githubLink={project?.githubLink || ''}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className='custom-container py-10'>
+        <SectionHeader
+          subtitle='Blog'
+          title='Checkout My Latest Articles.'
+          className='mb-8'
+          ctaText='View All Articles'
+          ctaLink='/blogs'
+        />
+
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-10'>
+          {blogs?.slice(0, 3)?.map((blog) => (
+            <ProjectCard
+              key={blog.slug}
+              title={blog.title}
+              thumbnail={blog.thumbnail}
+              slug={
+                isValidUrl(blog.slug) ? blog.slug : `/portfolios/${blog.slug}`
+              }
+              excerpt={blog.excerpt}
+              tags={blog?.tags || []}
             />
           ))}
         </div>

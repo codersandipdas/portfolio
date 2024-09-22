@@ -20,18 +20,14 @@ const Blogs = () => {
         />
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-10'>
-          {blogs.map((project) => (
+          {blogs.map((blog) => (
             <ProjectCard
-              key={project.slug}
-              title={project.title}
-              thumbnail={project.thumbnail}
-              slug={
-                isValidUrl(project.slug)
-                  ? project.slug
-                  : `/portfolios/${project.slug}`
-              }
-              excerpt={project.excerpt}
-              tags={project?.tags || []}
+              key={blog.slug}
+              title={blog.title}
+              thumbnail={blog.thumbnail}
+              slug={isValidUrl(blog.slug) ? blog.slug : `/blogs/${blog.slug}`}
+              excerpt={blog.excerpt}
+              tags={blog?.tags || []}
             />
           ))}
         </div>
