@@ -1,7 +1,8 @@
 export const isValidUrl = (urlString: string) => {
   try {
     return Boolean(new URL(urlString));
-  } catch (_) {
+  } catch (e) {
+    console.log('e', e);
     return false;
   }
 };
