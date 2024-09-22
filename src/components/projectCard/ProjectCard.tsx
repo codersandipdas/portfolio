@@ -25,18 +25,22 @@ const ProjectCard = ({
   githubLink,
 }: Props) => {
   return (
-    <article className='bg-gray-900 text-white relative border-2 shadow-2xl drop-shadow-lg border-gray-600/40 rounded-lg p-2.5 overflow-hidden'>
-      <Image
-        src={thumbnail}
-        alt={title}
-        height={200}
-        width={400}
-        quality={100}
-        className='w-full h-auto rounded'
-      />
+    <article className='group bg-gray-900 text-white relative border-2 shadow-2xl drop-shadow-lg border-gray-600/40 rounded-xl p-3 overflow-hidden'>
+      <div className='w-full aspect-video rounded overflow-hidden relative'>
+        <Image
+          src={thumbnail}
+          alt={title}
+          height={200}
+          width={400}
+          quality={100}
+          className='bg-slate-800 w-full h-full object-cover object-center group-hover:scale-[1.2] transition-transform duration-500'
+        />
+        <div className='absolute bottom-0 left-0 w-full h-[60px] bg-gradient-to-b from-transparent from-10% to-gray-900/40 to-90%'></div>
+      </div>
+
       <h3 className='mt-5 text-xl font-bold line-clamp-2'>{title}</h3>
 
-      {tags?.length && (
+      {tags?.length > 0 && (
         <div className='flex gap-2 flex-wrap items-center my-2'>
           {tags?.map((tag) => (
             <p
@@ -51,7 +55,7 @@ const ProjectCard = ({
 
       <p className='mt-1 text-sm text-white/60 line-clamp-4'>{excerpt}</p>
 
-      <div className='flex gap-2 items-center justify-between mt-3 mb-1'>
+      <div className='flex gap-2 items-center justify-between mt-3'>
         <SocialButton
           title='Read More'
           href={slug}
