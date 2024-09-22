@@ -17,7 +17,7 @@ export default function Home() {
             Fullstack Dev.
           </h1>
           <p className='my-4 max-w-prose font-normal text-gray-400 d:text-gray-400 md:text-lg md:tracking-tight'>
-            I'm a Fullstack Developer with over a year of professional
+            I&apos;m a Fullstack Developer with over a year of professional
             experience in MERN stack. I have hands-on experience with HTML, CSS,
             Javascript, React.js, Next.js, React Native, Svelte.js, Tailwind
             CSS, Node.js, Express.js, Nest.js, MongoDB, and Git, etc.
