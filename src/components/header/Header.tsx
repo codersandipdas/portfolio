@@ -1,11 +1,17 @@
 'use client';
 
 import { links } from '@/utils/navLinks';
+import { socials } from '@/utils/socials';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
+import { CgClose } from 'react-icons/cg';
 import { FiMenu } from 'react-icons/fi';
+const Drawer = dynamic(() => import('react-modern-drawer'), { ssr: false });
+import 'react-modern-drawer/dist/index.css';
+import SocialButton from '../socialButton/SocialButton';
 
 const Header = () => {
   const pathname = usePathname();
@@ -71,29 +77,57 @@ const Header = () => {
         </div>
       </header>
 
-      {isMNVisible && (
-        <nav className='bg-white fixed w-full top-[76px] rounded-b-sm transition-all z-[9]'>
-          {links?.map((link) => (
-            <Link
-              onClick={handleHideMobileNav}
-              key={link.id}
-              href={link.link}
-              className={`block py-3 px-4 ${
-                pathname === link.link ? 'text-primary' : 'text-black'
-              } hover:text-primary transition-all text-base font-normal`}
-            >
-              {link.title}
-            </Link>
-          ))}
+      <Drawer
+        direction='right'
+        onClose={handleHideMobileNav}
+        open={isMNVisible}
+        size='70vw'
+        lockBackgroundScroll
+        className='!bg-slate-900'
+      >
+        <div className='text-white/50 py-3 px-2'>
+          <button
+            className='flex items-center justify-center size-[30px]'
+            onClick={handleHideMobileNav}
+          >
+            <CgClose size={20} />
+          </button>
+        </div>
+
+        <hr className='border-white/10 mb-2' />
+
+        {links?.map((link) => (
           <Link
             onClick={handleHideMobileNav}
-            href='/assets/pdfs/resume.pdf'
-            className={`block py-3 px-4 text-black hover:text-primary transition-all text-base font-normal`}
+            key={link.id}
+            href={link.link}
+            className={`block py-3 px-4 ${
+              pathname === link.link ? 'text-primary' : 'text-white/50'
+            } transition-all text-base font-medium`}
           >
-            Resume
+            {link.title}
           </Link>
-        </nav>
-      )}
+        ))}
+        <Link
+          onClick={handleHideMobileNav}
+          href='/assets/pdfs/resume.pdf'
+          className={`block py-3 px-4 text-white/50 transition-all text-base font-medium`}
+        >
+          Resume
+        </Link>
+
+        <div className='flex items-center gap-4 px-4 py-4'>
+          {socials.map((social) => (
+            <SocialButton
+              key={social.id}
+              title={social.title}
+              href={social.link}
+              icon={social.icon}
+              showTitle={false}
+            />
+          ))}
+        </div>
+      </Drawer>
     </>
   );
 };
