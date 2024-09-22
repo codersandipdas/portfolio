@@ -32,7 +32,6 @@ const ProjectCard = ({
           alt={title}
           height={200}
           width={400}
-          quality={100}
           className='bg-slate-800 w-full h-full object-cover object-center group-hover:scale-[1.2] transition-transform duration-500'
         />
         <div className='absolute bottom-0 left-0 w-full h-[60px] bg-gradient-to-b from-transparent from-10% to-gray-900/40 to-90%'></div>

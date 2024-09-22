@@ -1,21 +1,17 @@
 import { socials } from '../utils/socials';
 import { CodeWindow } from '@/components/codeWindow/CodeWindow';
+import ProjectCard from '@/components/projectCard/ProjectCard';
+import SectionHeader from '@/components/sectionHeader/SectionHeader';
 import SocialButton from '@/components/socialButton/SocialButton';
+import { isValidUrl } from '@/utils/helpers';
+import { projects } from '@/utils/projects';
 
 export default function Home() {
   return (
     <main className='bg-black min-h-screen'>
-      <section
-        className='flex gap-10 flex-col md:flex-row md:items-center pt-[10rem] pb-20 hero-section custom-container'
-        style={{
-          backgroundImage: 'url(/assets/backgrounds/hero.svg)',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'top center',
-        }}
-      >
-        <div className='flex-[3] shrink-0'>
-          <h1 className='heading-hero text-white text-[2.4rem] md:text-[3.6rem] leading-[1.3em] md:leading-[1.2em] font-bold'>
+      <section className='flex gap-10 flex-col md:flex-row md:items-center pt-[10rem] pb-20 hero-section hero-bg custom-container'>
+        <div className='flex-[3] shrink-0 overflow-hidden'>
+          <h1 className='text-[2.8rem] md:text-6xl leading-[1.3em] md:leading-[1.2em] text-white font-bold'>
             Hi, <br /> I&apos;m{' '}
             <strong className='text-primary'>Sandip Das</strong>, <br /> a
             Fullstack Dev.
@@ -40,8 +36,36 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className='flex-[2] grow-0'>
+        <div className='flex-[2] shrink-0 overflow-hidden'>
           <CodeWindow />
+        </div>
+      </section>
+
+      <section className='custom-container py-10'>
+        <SectionHeader
+          subtitle='Portfolio'
+          title='Checkout my work.'
+          ctaText='View More'
+          ctaLink='/portfolios'
+          className='mb-8'
+        />
+
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-10'>
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.slug}
+              title={project.title}
+              thumbnail={project.thumbnail}
+              slug={
+                isValidUrl(project.slug)
+                  ? project.slug
+                  : `/portfolios/${project.slug}`
+              }
+              excerpt={project.excerpt}
+              tags={project?.tags || ['Javascript', 'HTML', 'CSS']}
+              githubLink={project?.githubLink || ''}
+            />
+          ))}
         </div>
       </section>
     </main>
