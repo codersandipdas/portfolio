@@ -1,7 +1,7 @@
 'use client';
 
 import { links } from '@/utils/navLinks';
-import { socials } from '@/utils/socials';
+import { socials, socialsButtons } from '@/utils/socials';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,6 +11,7 @@ import { CgClose } from 'react-icons/cg';
 import { FiMenu } from 'react-icons/fi';
 const Drawer = dynamic(() => import('react-modern-drawer'), { ssr: false });
 import 'react-modern-drawer/dist/index.css';
+import SocialLink from '../socialButton/SocialLink';
 import SocialButton from '../socialButton/SocialButton';
 
 const Header = () => {
@@ -118,10 +119,19 @@ const Header = () => {
 
         <div className='flex items-center gap-4 px-4 py-4'>
           {socials.map((social) => (
-            <SocialButton
+            <SocialLink
               key={social.id}
               title={social.title}
               href={social.link}
+              icon={social.icon}
+              showTitle={false}
+            />
+          ))}
+          {socialsButtons.map((social) => (
+            <SocialButton
+              key={social.id}
+              title={social.title}
+              onClick={social.onClick}
               icon={social.icon}
               showTitle={false}
             />

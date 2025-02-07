@@ -1,5 +1,7 @@
-import { socials } from '@/utils/socials';
+'use client';
+import { socials, socialsButtons } from '@/utils/socials';
 import React from 'react';
+import SocialLink from '../socialButton/SocialLink';
 import SocialButton from '../socialButton/SocialButton';
 
 const Footer = () => {
@@ -12,10 +14,19 @@ const Footer = () => {
         </div>
         <div className='flex items-center gap-4'>
           {socials.map((social) => (
-            <SocialButton
+            <SocialLink
               key={social.id}
               title={social.title}
               href={social.link}
+              icon={social.icon}
+              showTitle={false}
+            />
+          ))}
+          {socialsButtons.map((social) => (
+            <SocialButton
+              key={social.id}
+              title={social.title}
+              onClick={social.onClick}
               icon={social.icon}
               showTitle={false}
             />

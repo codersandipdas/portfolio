@@ -17,7 +17,7 @@ const codeString = `const coder = {
     'Next.js', 'Node.js',
     'Express.js',
     'Nest.js', 'MongoDB',
-    'Git', '...everythingNice',
+    'Git', 'WordPress', '...everythingNice',
   ],
   hardWorker: true,
   quickLearner: true,

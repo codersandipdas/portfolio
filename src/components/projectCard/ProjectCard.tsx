@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import SocialButton from '../socialButton/SocialButton';
+import SocialLink from '../socialButton/SocialLink';
 import { FaGithub } from 'react-icons/fa';
 import { IoArrowForward } from 'react-icons/io5';
 import { TbExternalLink } from 'react-icons/tb';
@@ -62,7 +62,7 @@ const ProjectCard = ({
       <p className='mt-1 text-sm text-white/60 line-clamp-4'>{excerpt}</p>
 
       <div className='flex gap-2 items-center justify-between mt-3'>
-        <SocialButton
+        <SocialLink
           title='Read More'
           href={slug}
           icon={<IoArrowForward />}
@@ -70,7 +70,7 @@ const ProjectCard = ({
           titleClassName='!text-primary'
         />
         {githubLink && (
-          <SocialButton
+          <SocialLink
             title='View repository'
             href={githubLink}
             icon={<FaGithub />}

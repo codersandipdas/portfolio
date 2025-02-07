@@ -1,8 +1,10 @@
-import { socials } from '../utils/socials';
+'use client';
+import { socials, socialsButtons } from '../utils/socials';
 import { CodeWindow } from '@/components/codeWindow/CodeWindow';
 import ProjectCard from '@/components/projectCard/ProjectCard';
 import SectionHeader from '@/components/sectionHeader/SectionHeader';
 import SocialButton from '@/components/socialButton/SocialButton';
+import SocialLink from '@/components/socialButton/SocialLink';
 import { blogs } from '@/utils/blogs';
 import { isValidUrl } from '@/utils/helpers';
 import { projects } from '@/utils/projects';
@@ -25,10 +27,18 @@ export default function Home() {
           </p>
           <div className='flex gap-4 flex-wrap items-center mt-8'>
             {socials.map((social) => (
-              <SocialButton
+              <SocialLink
                 key={social.id}
                 title={social.title}
                 href={social.link}
+                icon={social.icon}
+              />
+            ))}
+            {socialsButtons.map((social) => (
+              <SocialButton
+                key={social.id}
+                title={social.title}
+                onClick={social.onClick}
                 icon={social.icon}
               />
             ))}
