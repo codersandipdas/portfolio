@@ -85,7 +85,7 @@ export default function Home() {
           title='Professional Experience'
           // ctaText='View All Portfolio'
           // ctaLink='/portfolios'
-          className='mb-8'
+          className='mb-12'
         />
 
         {EXPERIENCES.map((exp, index) => (

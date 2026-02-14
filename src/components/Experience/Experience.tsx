@@ -13,10 +13,10 @@ const Experience: React.FC<Props> = ({ experience, right = false }) => {
       <div className='absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-emerald-500/20 -translate-x-1/2 block'></div>
 
       <div
-        className={`flex flex-col md:flex-row gap-8 items-center ${right ? 'md:flex-row-reverse' : ''}`}
+        className={`flex flex-col md:flex-row gap-8 md:gap-16 items-center ${right ? 'md:flex-row-reverse' : ''}`}
       >
         <div className='flex-1 w-full'>
-          <div className='glass-card p-0 md:p-8 rounded-2xl border-emerald-500/10 hover:border-emerald-500/30 transition-all group'>
+          <div className='bg-gray-900 p-4 md:p-8 rounded-2xl border border-gray-600/40 transition-all group'>
             <div className='flex flex-wrap items-center justify-between mb-4 gap-2'>
               <h3 className='text-xl font-bold group-hover:text-emerald-400 transition-colors'>
                 {experience.role}

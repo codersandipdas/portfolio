@@ -20,7 +20,7 @@ export const EXPERIENCES: Experience[] = [
     company: 'Code Business Solutions Private Limited',
     role: 'Software Engineer',
     period: 'July 2023 - Aug 2025',
-    location: 'Mumbai, India',
+    location: 'Mumbai, Maharashtra, India · On-site',
     highlights: [
       'Designed and developed scalable full-stack applications using React, Next.js, and NestJS.',
       'Improved page load performance by 30% and reduced API response time by 40%.',
