@@ -1,11 +1,13 @@
 'use client';
 import { socials, socialsButtons } from '../utils/socials';
 import { CodeWindow } from '@/components/codeWindow/CodeWindow';
+import Experience from '@/components/Experience/Experience';
 import ProjectCard from '@/components/projectCard/ProjectCard';
 import SectionHeader from '@/components/sectionHeader/SectionHeader';
 import SocialButton from '@/components/socialButton/SocialButton';
 import SocialLink from '@/components/socialButton/SocialLink';
 import { blogs } from '@/utils/blogs';
+import { EXPERIENCES } from '@/utils/experiences';
 import { isValidUrl } from '@/utils/helpers';
 import { projects } from '@/utils/projects';
 
@@ -15,12 +17,12 @@ export default function Home() {
       <section className='flex gap-10 flex-col md:flex-row md:items-center pt-[10rem] pb-20 hero-section hero-bg custom-container'>
         <div className='flex-[3] shrink-0 overflow-hidden'>
           <h1 className='text-[2.6rem] md:text-6xl leading-[1.3em] md:leading-[1.2em] text-white font-bold'>
-            Hi, <br /> I&apos;m{' '}
-            <strong className='text-primary'>Sandip Das</strong>, <br /> a
-            Fullstack Dev.
+            Hi, I&apos;m <strong className='text-primary'>Sandip</strong>,{' '}
+            <br /> a Fullstack Dev.
           </h1>
           <p className='my-4 max-w-prose font-normal text-gray-400 d:text-gray-400 md:text-lg md:tracking-tight'>
-            I&apos;m a Fullstack Developer with over a year of professional
+            I&apos;m a Fullstack Developer with{' '}
+            <span className='text-white'>3+ years</span> of professional
             experience in MERN stack. I have hands-on experience with HTML, CSS,
             Javascript, React.js, Next.js, React Native, Svelte.js, Tailwind
             CSS, Node.js, Express.js, Nest.js, MongoDB, and Git, etc.
@@ -75,6 +77,20 @@ export default function Home() {
             />
           ))}
         </div>
+      </section>
+
+      <section className='custom-container py-24 bg-white/[0.02]'>
+        <SectionHeader
+          subtitle='Career Path'
+          title='Professional Experience'
+          // ctaText='View All Portfolio'
+          // ctaLink='/portfolios'
+          className='mb-8'
+        />
+
+        {EXPERIENCES.map((exp, index) => (
+          <Experience key={exp.id} experience={exp} right={index % 2 === 0} />
+        ))}
       </section>
 
       <section className='custom-container py-10'>
