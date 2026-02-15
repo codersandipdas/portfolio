@@ -93,6 +93,38 @@ export default function Home() {
         ))}
       </section>
 
+      {/* add
+      
+      Abilities
+Technical Arsenal
+
+Frontend
+React.js
+Next.js
+Svelte.js
+Tailwind CSS
+Bootstrap
+
+Backend
+Node.js
+Nest.js
+Express.js
+REST APIs
+Swagger
+
+Database
+MongoDB
+MySQL
+Firebase
+Schema Design
+
+Cloud & DevOps
+AWS (EC2, S3, Lambda)
+GCP
+Git
+CI/CD
+      */}
+
       <section className='custom-container py-10'>
         <SectionHeader
           subtitle='Blog'
