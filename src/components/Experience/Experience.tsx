@@ -16,9 +16,9 @@ const Experience: React.FC<Props> = ({ experience, right = false }) => {
         className={`flex flex-col md:flex-row gap-8 md:gap-16 items-center ${right ? 'md:flex-row-reverse' : ''}`}
       >
         <div className='flex-1 w-full'>
-          <div className='bg-gray-900 p-4 md:p-8 rounded-2xl border border-gray-600/40 transition-all group'>
+          <div className='bg-gray-900 p-4 md:p-8 rounded-xl hover:border-primary/30 border border-gray-600/40 transition-all group'>
             <div className='flex flex-wrap items-center justify-between mb-4 gap-2'>
-              <h3 className='text-xl font-bold group-hover:text-emerald-400 transition-colors'>
+              <h3 className='text-xl font-bold transition-colors'>
                 {experience.role}
               </h3>
               <span className='text-sm font-medium bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full'>

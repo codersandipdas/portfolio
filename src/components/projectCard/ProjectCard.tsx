@@ -26,7 +26,7 @@ const ProjectCard = ({
   githubLink,
 }: Props) => {
   return (
-    <article className='group bg-gray-900 text-white relative border-2 shadow-2xl drop-shadow-lg border-gray-600/40 rounded-xl p-3 overflow-hidden'>
+    <article className='group bg-gray-900 text-white relative border hover:border-primary/30 shadow-2xl drop-shadow-lg border-gray-600/40 rounded-xl p-3 overflow-hidden transition-all'>
       <div className='w-full aspect-video rounded overflow-hidden relative'>
         <Image
           src={thumbnail}
