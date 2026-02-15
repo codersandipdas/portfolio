@@ -50,7 +50,7 @@ const ProjectCard = ({
         <div className='flex gap-2 flex-wrap items-center my-2'>
           {tags?.map((tag) => (
             <p
-              className='rounded bg-white/10 py-[3px] px-1.5 text-sm font-medium'
+              className='rounded border border-white/10 text-xs py-[3px] px-1.5 font-medium'
               key={tag}
             >
               {tag}
