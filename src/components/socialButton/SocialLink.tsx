@@ -25,7 +25,7 @@ const SocialLink = ({
       title={title}
       href={href}
       target={target}
-      className={`flex gap-2 items-center bg-white/10 hover:bg-white/15 px-2 py-1.5 rounded-md transition-all ${className}`}
+      className={`flex gap-2 items-center border border-white/5 bg-white/5 hover:bg-white/15 px-5 py-2.5 rounded-md transition-all ${className}`}
     >
       <span className='text-primary text-lg'>{icon}</span>
       {showTitle && (

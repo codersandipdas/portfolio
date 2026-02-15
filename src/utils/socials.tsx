@@ -28,7 +28,7 @@ const handleCopyEmail = async () => {
 export const socialsButtons = [
   {
     id: '3',
-    title: 'Email',
+    title: 'Email Me',
     onClick: handleCopyEmail,
     icon: <FaEnvelope />,
   },
