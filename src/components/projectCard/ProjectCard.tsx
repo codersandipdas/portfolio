@@ -66,7 +66,7 @@ const ProjectCard = ({
           title='Read More'
           href={slug}
           icon={<IoArrowForward />}
-          className='flex-row-reverse !bg-transparent !px-0'
+          className='flex-row-reverse !bg-transparent !px-0 !border-none'
           titleClassName='!text-primary'
         />
         {githubLink && (
@@ -75,7 +75,7 @@ const ProjectCard = ({
             href={githubLink}
             icon={<FaGithub />}
             showTitle={false}
-            className='flex-row-reverse !bg-transparent !p-0'
+            className='flex-row-reverse !bg-transparent !p-0 !border-none'
           />
         )}
       </div>
